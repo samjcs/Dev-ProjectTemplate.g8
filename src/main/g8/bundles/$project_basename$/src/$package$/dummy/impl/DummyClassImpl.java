@@ -1,6 +1,6 @@
 package $package$.dummy.impl;
 
-public class DummyClassImpl $if(create_ecore_model.truthy)$extends DummyClassImplGen $endif${
+public class DummyClassImpl extends DummyClassImplGen {
 
     @Override
     public String toString() {
