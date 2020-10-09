@@ -1,0 +1,32 @@
+module generate
+
+import org.eclipse.emf.mwe2.ecore.EcoreGenerator
+import tools.mdsd.ecoreworkflow.mwe2lib.bean.EclipseRCPSupportingStandaloneSetup
+import tools.mdsd.ecoreworkflow.mwe2lib.component.ContextDependentMapping
+import tools.mdsd.ecoreworkflow.mwe2lib.component.URISupportingDirectoryCleaner
+import tools.mdsd.ecoreworkflow.mwe2lib.component.GapPatternPostProcessor
+
+var workspaceRoot = "../../"
+
+Workflow {
+	bean = EclipseRCPSupportingStandaloneSetup {
+		scanClassPath = true
+		platformUri = workspaceRoot
+	}
+
+	component = EcoreGenerator {
+		generateCustomClasses = false
+		generateEdit = false
+		generateEditor = false
+		genModel = "platform:/resource/$project_basename$/model/dummy.genmodel"
+		srcPath = "platform:/resource/$project_basename$/src-gen"
+		srcPath = "platform:/resource/$project_basename$/src"
+	}
+	
+	component = GapPatternPostProcessor {
+		folders = {
+			gen = "platform:/resource/$project_basename$/src-gen"
+			src = "platform:/resource/$project_basename$/src"
+		}
+	}	
+}

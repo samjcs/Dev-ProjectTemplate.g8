@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extensions>
+	<extension>
+		<groupId>org.eclipse.tycho.extras</groupId>
+		<artifactId>tycho-pomless</artifactId>
+		<version>$pomless_version$</version>
+	</extension>
+	<extension>
+		<groupId>org.palladiosimulator</groupId>
+		<artifactId>tycho-tp-refresh-maven-plugin</artifactId>
+		<version>$tprefresher_version$</version>
+	</extension>
+</extensions>

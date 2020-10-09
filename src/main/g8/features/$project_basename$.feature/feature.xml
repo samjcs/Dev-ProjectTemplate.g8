@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="$project_basename$.feature"
+      label="$name$ Feature"
+      version="$version$.qualifier"
+      license-feature="tools.mdsd.license.epl2"
+      license-feature-version="1.0.0">
+
+   <requires>
+      <import feature="tools.mdsd.license.epl2"/>
+   </requires>
+
+   <plugin
+         id="$project_basename$"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
